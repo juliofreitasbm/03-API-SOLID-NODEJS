@@ -43,7 +43,8 @@ ___
 + `npm init -y` : cria o package.json para iniciar o projeto NodeJS.
 + `npm i typescript @types/node tsx tsup -D` : instala o typescrit, o types/node e o tsx, responsável por converter .ts para .js. O tsup é a biblioteca que cria a versão de build.
 + `npx tsc --init`: executa o arquivo binário tsc dentro de ./node_modules/.bin/ para criar o arquivo tsconfig.json.
-  > **_OBS:_**  Mudar "target" para "es2020" dentro do tsconfig.json.
+  > **_OBS1:_**  Mudar "target" para "es2020" dentro do tsconfig.json.
+  > **_OBS2:_**  No tsconfig.json é possível configurar uma baseUrl e os paths para criar atalhos que facilitam a escrita dos caminhos ma importação de arquivos.
 + `npm i fastify` : instala o microframework fastify (semelhante ao express) para fazer requisições http.
 + Scripts criados: 
   ```
@@ -53,3 +54,15 @@ ___
       "build": "tsup src --out-dir build"
     },
   ```
+
+### Aula "Carregando variáveis ambiente"
+
++ `npm i dotenv` : permite que o node entenda o arquivo .env na pasta raíz do projeto. Esse arquivo permite configurar diferentes ambientes: desenvolvimento, produção, teste, etc.
+  > **_OBS:_**  Instalar extensão DotENV do VSCode.
++ `npm i zod` : biblioteca para validação de dados dentro do projeto. Auxilia na configuração do ".env".
+
+### Aula "Configurando ESLint"
+
++ `npm i eslint -D` : Instala o ESLint.
++ `npm i eslint @rocketseat/eslint-config -D` : Instala as configurações da RocketSeat para o ESLint.
++ `npx eslint --init` : Permite configurar o ESLint para personalizar o projeto. 
