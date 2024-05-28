@@ -66,3 +66,43 @@ ___
 + `npm i eslint -D` : Instala o ESLint.
 + `npm i eslint @rocketseat/eslint-config -D` : Instala as configurações da RocketSeat para o ESLint.
 + `npx eslint --init` : Permite configurar o ESLint para personalizar o projeto. 
+  > **_OBS:_**  Acrescentar no settings.json do VSCode o seguinte código:
+  ```
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+  ```
+
+### Aula "Fundamentos do Prisma ORM"
+
++ `npm i prisma -D` : Instala o ORM prisma.
+  > **_OBS:_**  ORM (Object Relational Mapper) é uma ferramenta que permite mapear as tabelas do banco de dados na forma de objetos. O Prisma possui uma vantagem em relação ao Knex porque diminui o retrabalho de configurar as tabelas no código e no banco de dados. Ele também cria as migrations de forma automática.
++ `npx prisma -h` : Permite ver os comandos que podem ser executados com o prisma
++ `npx prisma init` : inicializa a parte de banco de dados dentro do projeto
+  > **_OBS1:_**  Instale e extensão do Prisma dentro do VSCode
+  > **_OBS2:_**  Acrescente dentro do settings.json do VSCode o seguinte código:
+  ```
+    "[prisma]": {
+      "editor.formatOnSave": true
+    }
+  ```
++ `npx prisma generate` : cria de forma automatizada a tipagem do schema, ou seja, permite que o typescript entenda cada tabela e quais as colunas delas.
++ `npm i @prisma/client` : Dependência de produção que acessa de fato o banco de dados.
+
+### Aula "Fundamentos do Docker"
+  > **_OBS1:_** O docker permite criar uma instância com os arquivos de um banco de dados, arquivos de configuração, etc. Dessa forma quando queremos deletar essa instância não fica nenhum resquício para trás.
+  > **_OBS2:_**  Em comparação à virtualização de sistemas operacionais, o docker leva vantagem e é mais rápido porque evita que o sistema opercional seja virtualizado para cada instância, pois ele pode ser reaproveitado.
++ Desinstalar versões antigas do docker:
+  ```
+    sudo dnf remove docker \
+                      docker-client \
+                      docker-client-latest \
+                      docker-common \
+                      docker-latest \
+                      docker-latest-logrotate \
+                      docker-logrotate \
+                      docker-selinux \
+                      docker-engine-selinux \
+                      docker-engine
+  ```
++ `sdfasdf`
