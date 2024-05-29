@@ -91,6 +91,7 @@ ___
 
 ### Aula "Fundamentos do Docker"
   > **_OBS1:_** O docker permite criar uma instância com os arquivos de um banco de dados, arquivos de configuração, etc. Dessa forma quando queremos deletar essa instância não fica nenhum resquício para trás.
+
   > **_OBS2:_**  Em comparação à virtualização de sistemas operacionais, o docker leva vantagem e é mais rápido porque evita que o sistema opercional seja virtualizado para cada instância, pois ele pode ser reaproveitado.
 + Desinstalar versões antigas do docker:
   ```
@@ -105,4 +106,41 @@ ___
                       docker-engine-selinux \
                       docker-engine
   ```
-+ `sdfasdf`
++ Links importantes para a instalação do docker no Fedora
+  >[Possíveis erros de instalação](https://docs.docker.com/engine/install/fedora/)
+
+  >[Login no Docker Desktop](https://docs.docker.com/desktop/get-started/#credentials-management-for-linux-users)
+
+### Aula "PostgreSQL com Docker"
++ Inicia o container postgresql usando a image da bitnami. Habilita a porta 5432 do sistema operacional para receber o mesmo que a porta 5432 do docker.
+  ```
+    docker run --name api-solid-pg
+      -e POSTGRESQL_USERNAME=docker
+      -e POSTGRESQL_PASSWORD=docker
+      -e POSTGRESQL_DATABASE=apisolid
+      -p 5432:5432 
+      bitnami/postgresql
+  ```
+  > **_OBS:_** O bitnami/postgresql é uma imagem do docker que pode ser encontrada no [Docker Hub](https://hub.docker.com/r/bitnami/postgresql)
++ `docker ps` : Lista todos os containers em execução.
++ `docker ps -a` : Lista todos os container já criados.
++ `docker start [nome ou id do container]` : Inicia o container.
++ `docker stop [nome ou id do container]` : Para o container.
++ `docker rm [nome ou id do container]` : Remove o container.
++ `docker logs [nome ou id do container]` : Mostra os logs do banco de dados rodando
+  > **_OBS:_** Com o -f mantém o terminal rodando mostrando os novos logs
+
++ `npx prisma migrate dev` : Detecta as alterações no banco e gera o migrate.
+  > **_OBS:_** O container docker precisa estar rodando
++ `npx prisma studio` : Abre no navegador uma interface para navegar pela interface do banco de dados.
+
+### Aula "Utilizando o Docker Compose"
+
++ `docker compose up -d` : Starta todos os containers definidos dentro do docker-compose.yml
+  > **_OBS1:_** O -d é o modo detached para não ficar mostrando logs no terminal
+
+  > **_OBS2:_** Instalar a extensão Docker do Vscode ajuda a detectar erros na criação do docker-compose.yml
++ `docker compose stop` : Para todos os containers da aplicação que foram definidos no arquivo docker-compose.yml
+
++ `docker compose down` : Apaga todos os containers eincluindo os bancos de dados da aplicação que foram definidos no arquivo docker-compose.yml
+
