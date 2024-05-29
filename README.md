@@ -142,5 +142,5 @@ ___
   > **_OBS2:_** Instalar a extensão Docker do Vscode ajuda a detectar erros na criação do docker-compose.yml
 + `docker compose stop` : Para todos os containers da aplicação que foram definidos no arquivo docker-compose.yml
 
-+ `docker compose down` : Apaga todos os containers eincluindo os bancos de dados da aplicação que foram definidos no arquivo docker-compose.yml
++ `docker compose down` : Apaga todos os containers excluindo os bancos de dados da aplicação que foram definidos no arquivo docker-compose.yml
 
