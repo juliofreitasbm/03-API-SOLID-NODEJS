@@ -116,7 +116,7 @@ ___
   >Permissão do usuário local ao docker: [Comando único simplificado (final da página)](https://developer.fedoraproject.org/tools/docker/docker-installation.html) ou então [Procedimento passo a passo da documentação do Docker](https://docs.docker.com/engine/install/linux-postinstall/)
 
 ### Aula "PostgreSQL com Docker"
-+ Inicia o container postgresql usando a image da bitnami. Habilita a porta 5432 do sistema operacional para receber o mesmo que a porta 5432 do docker.
++ Cria e inicia o container postgresql usando a image da bitnami. Habilita a porta 5432 do sistema operacional para receber o mesmo que a porta 5432 do docker.
   ```
     docker run --name api-solid-pg
       -e POSTGRESQL_USERNAME=docker
@@ -125,9 +125,9 @@ ___
       -p 5432:5432 
       bitnami/postgresql
   ```
-  > **_OBS:_** O bitnami/postgresql é uma imagem do docker que pode ser encontrada no [Docker Hub](https://hub.docker.com/r/bitnami/postgresql)
-+ `docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apisolid -p 5432:5432  bitnami/postgresql` : O comando docker run cria um container, o restante são parâmetros específicos para esse projeto.
-  > **_OBS_** É necessário fazer uma configuração adicional no .env adicionado `DATABASE_URL="postgresql://docker:docker@localhost:5432/apisolid?schema=public"`
+  > **_OBS1:_** O bitnami/postgresql é uma imagem do docker que pode ser encontrada no [Docker Hub](https://hub.docker.com/r/bitnami/postgresql)
+
+  > **_OBS2_** É necessário fazer uma configuração adicional no .env adicionado `DATABASE_URL="postgresql://docker:docker@localhost:5432/apisolid?schema=public"`
 + `docker ps` : Lista todos os containers em execução.
 + `docker ps -a` : Lista todos os container já criados.
 + `docker start [nome ou id do container]` : Inicia o container.
@@ -152,5 +152,5 @@ ___
 
 ### Aula "Criando schema do Prisma"
 
-+ ```npx prisma migrate dev``` : Não detecta as novas alterações, apenas roda todas as migrations que já foram criadas.
++ `npx prisma migrate dev` : Não detecta as novas alterações, apenas roda todas as migrations que já foram criadas.
   > **_OBS:_** Utilizado em produção
