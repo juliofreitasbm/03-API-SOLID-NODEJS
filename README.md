@@ -152,5 +152,5 @@ ___
 
 ### Aula "Criando schema do Prisma"
 
-+ `npx prisma migrate dev` : Não detecta as novas alterações, apenas roda todas as migrations que já foram criadas.
++ ```npx prisma migrate dev``` : Não detecta as novas alterações, apenas roda todas as migrations que já foram criadas.
   > **_OBS:_** Utilizado em produção
