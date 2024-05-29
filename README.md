@@ -44,6 +44,7 @@ ___
 + `npm i typescript @types/node tsx tsup -D` : instala o typescrit, o types/node e o tsx, responsável por converter .ts para .js. O tsup é a biblioteca que cria a versão de build.
 + `npx tsc --init`: executa o arquivo binário tsc dentro de ./node_modules/.bin/ para criar o arquivo tsconfig.json.
   > **_OBS1:_**  Mudar "target" para "es2020" dentro do tsconfig.json.
+
   > **_OBS2:_**  No tsconfig.json é possível configurar uma baseUrl e os paths para criar atalhos que facilitam a escrita dos caminhos ma importação de arquivos.
 + `npm i fastify` : instala o microframework fastify (semelhante ao express) para fazer requisições http.
 + Scripts criados: 
@@ -112,7 +113,7 @@ ___
 
   >[Login no Docker Desktop](https://docs.docker.com/desktop/get-started/#credentials-management-for-linux-users)
 
-  >[Permitir acesso ao docker como non root user](https://developer.fedoraproject.org/tools/docker/docker-installation.html)
+  >Permissão do usuário local ao docker: [Comando único simplificado (final da página)](https://developer.fedoraproject.org/tools/docker/docker-installation.html) ou então [Procedimento passo a passo da documentação do Docker](https://docs.docker.com/engine/install/linux-postinstall/)
 
 ### Aula "PostgreSQL com Docker"
 + Inicia o container postgresql usando a image da bitnami. Habilita a porta 5432 do sistema operacional para receber o mesmo que a porta 5432 do docker.
