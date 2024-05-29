@@ -80,7 +80,7 @@ ___
 + `npx prisma -h` : Permite ver os comandos que podem ser executados com o prisma
 + `npx prisma init` : inicializa a parte de banco de dados dentro do projeto
   > **_OBS1:_**  Instale e extensão do Prisma dentro do VSCode
-  
+
   > **_OBS2:_**  Acrescente dentro do settings.json do VSCode o seguinte código:
   ```
     "[prisma]": {
@@ -125,6 +125,8 @@ ___
       bitnami/postgresql
   ```
   > **_OBS:_** O bitnami/postgresql é uma imagem do docker que pode ser encontrada no [Docker Hub](https://hub.docker.com/r/bitnami/postgresql)
++ `docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apisolid -p 5432:5432  bitnami/postgresql` : O comando docker run cria um container, o restante são parâmetros específicos para esse projeto.
+  > **_OBS_** É necessário fazer uma configuração adicional no .env adicionado `DATABASE_URL="postgresql://docker:docker@localhost:5432/apisolid?schema=public"`
 + `docker ps` : Lista todos os containers em execução.
 + `docker ps -a` : Lista todos os container já criados.
 + `docker start [nome ou id do container]` : Inicia o container.
