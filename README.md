@@ -80,6 +80,7 @@ ___
 + `npx prisma -h` : Permite ver os comandos que podem ser executados com o prisma
 + `npx prisma init` : inicializa a parte de banco de dados dentro do projeto
   > **_OBS1:_**  Instale e extensão do Prisma dentro do VSCode
+  
   > **_OBS2:_**  Acrescente dentro do settings.json do VSCode o seguinte código:
   ```
     "[prisma]": {
@@ -110,6 +111,8 @@ ___
   >[Possíveis erros de instalação](https://docs.docker.com/engine/install/fedora/)
 
   >[Login no Docker Desktop](https://docs.docker.com/desktop/get-started/#credentials-management-for-linux-users)
+
+  >[Permitir acesso ao docker como non root user](https://developer.fedoraproject.org/tools/docker/docker-installation.html)
 
 ### Aula "PostgreSQL com Docker"
 + Inicia o container postgresql usando a image da bitnami. Habilita a porta 5432 do sistema operacional para receber o mesmo que a porta 5432 do docker.
@@ -144,3 +147,7 @@ ___
 
 + `docker compose down` : Apaga todos os containers excluindo os bancos de dados da aplicação que foram definidos no arquivo docker-compose.yml
 
+### Aula "Criando schema do Prisma"
+
++ `npx prisma migrate dev` : Não detecta as novas alterações, apenas roda todas as migrations que já foram criadas.
+  > **_OBS:_** Utilizado em produção
