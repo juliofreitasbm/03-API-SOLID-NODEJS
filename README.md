@@ -4,7 +4,7 @@ Esse módulo possui a estruturação do projeto GymPass app utilizando NodeJS, S
 
 ___
 ### Palavras chave:
->NodeJS, Solid, Fastify, Typescript
+>NodeJS, Solid, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern
 
 ## Acompanhamento do Projeto:
 
