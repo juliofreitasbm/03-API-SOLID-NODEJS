@@ -155,7 +155,7 @@ ___
 + `npx prisma migrate dev` : Não detecta as novas alterações, apenas roda todas as migrations que já foram criadas.
   > **_OBS:_** Utilizado em produção
 
-  ### Aula "Hash da senha e validação"
+### Aula "Hash da senha e validação"
 
 + `npm i bcryptjs` : Atualmente a biblioteca mais comum no nodejs pra fazer hash de senhas.
 
