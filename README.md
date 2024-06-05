@@ -4,7 +4,7 @@ Esse módulo possui a estruturação do projeto GymPass app utilizando NodeJS, S
 
 ___
 ### Palavras chave:
->NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern
+>NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest
 
 ## Acompanhamento do Projeto:
 
@@ -160,3 +160,10 @@ ___
 + `npm i bcryptjs` : Atualmente a biblioteca mais comum no nodejs pra fazer hash de senhas.
 
 + `npm i -D @types/bcryptjs` : Como essa biblioteca está em javascript é necessário instalar separadamente o @types/bcryptjs.
+
+### Aula "Configurando Vitest"
+
++ `npm i vitest vite-tsconfig-paths -D` : Instala o vitest que é uma ferramenta para escrever testes.
+  > **_OBS1:_** O "vite-tsconfig-paths" é um plugin que permite que o vitest entenda os paths definidos no tsconfig.json, como o uso do "@", por exemplo.
+  > **_OBS2:_** Criar o alias `"test": "vitest run"` para rodar os testes do vitest apenas uma vez.
+  > **_OBS3:_** Criar o alias `"test:watch": "vitest"` para deixar o terminal rodando os testes do vitest.
