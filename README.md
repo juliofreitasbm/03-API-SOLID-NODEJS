@@ -165,5 +165,7 @@ ___
 
 + `npm i vitest vite-tsconfig-paths -D` : Instala o vitest que é uma ferramenta para escrever testes.
   > **_OBS1:_** O "vite-tsconfig-paths" é um plugin que permite que o vitest entenda os paths definidos no tsconfig.json, como o uso do "@", por exemplo.
+
   > **_OBS2:_** Criar o alias `"test": "vitest run"` para rodar os testes do vitest apenas uma vez.
+  
   > **_OBS3:_** Criar o alias `"test:watch": "vitest"` para deixar o terminal rodando os testes do vitest.
