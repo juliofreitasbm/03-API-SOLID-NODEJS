@@ -4,7 +4,7 @@ Esse módulo possui a estruturação do projeto GymPass app utilizando NodeJS, S
 
 ___
 ### Palavras chave:
->NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest
+>NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler)
 
 ## Acompanhamento do Projeto:
 
@@ -22,7 +22,7 @@ ___
 
 ### Regras de Negócio:
 
-- [ ] O usuário não deve poder se cadastrar com um e-mail duplicado;
+- [x] O usuário não deve poder se cadastrar com um e-mail duplicado;
 - [ ] O usuário não pode fazer 2 check-ins no mesmo dia;
 - [ ] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
 - [ ] O check-in só pode ser validado até 20 minutos após criado;
@@ -31,8 +31,8 @@ ___
 
 ### Requisitos Não Funcionais:
 
-- [ ] A senha do usuário precisa estar criptografada;
-- [ ] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
+- [x] A senha do usuário precisa estar criptografada;
+- [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
 - [ ] Todas listas de dados precisam estar paginadas com 20 itens por página;
 - [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
 
@@ -167,5 +167,15 @@ ___
   > **_OBS1:_** O "vite-tsconfig-paths" é um plugin que permite que o vitest entenda os paths definidos no tsconfig.json, como o uso do "@", por exemplo.
 
   > **_OBS2:_** Criar o alias `"test": "vitest run"` para rodar os testes do vitest apenas uma vez.
-  
+
   > **_OBS3:_** Criar o alias `"test:watch": "vitest"` para deixar o terminal rodando os testes do vitest.
+
+### Aula "Gerando covers de test"
+
++ `"test:coverage": "vitest run --coverage"` : Criar alias no package.json.
+  > **_OBS:_** Após criá-lo, execute-o e o terminal irá sugerir a instalação do '@vitest/coverage-c8'
+
+### Aula "Utilizando AI do Vitest"
+
++ `npm i -D @vitest/ui` : Instala uma UI que permite ver o coverage dos testes pelo navegador
+  > **_OBS:_** Criar o alias `"test:ui": "vitest --ui"`
