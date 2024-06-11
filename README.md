@@ -30,7 +30,7 @@ ___
   ---
 
 <details>
- <summary style="font-size: 18px" ><strong>Regras de Negócio</strong></summary>
+ <summary style="font-size: 30px" ><strong>Regras de Negócio</strong></summary>
 
   ---
   
