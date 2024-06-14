@@ -4,7 +4,7 @@ Esse módulo possui a estruturação do projeto GymPass app utilizando NodeJS, S
 
 ___
 ### Palavras chave:
->NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development
+>NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token)
 
 ## Acompanhamento do Projeto:
 
@@ -184,3 +184,9 @@ ___
 ### Aula "Validando data do check-in"
 
 + `npm i dayjs` : Para lidar com datas no javascript.
+
+### Aula "Validando data do check-in"
+
++ [Site Base Decode 64](https://base64decode.org) : Faz encode e decode no formato base 64
++ [StackOverflow Basic Auth](https://pt.stackoverflow.com/questions/254503/o-que-é-basic-auth) : Página no stackoverflow sobre basic auth.
++ [Site JWT.IO](https://jwt.io) : Gera tokens JWT online 
