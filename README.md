@@ -190,3 +190,8 @@ ___
 + [Site Base Decode 64](https://base64decode.org) : Faz encode e decode no formato base 64
 + [StackOverflow Basic Auth](https://pt.stackoverflow.com/questions/254503/o-que-é-basic-auth) : Página no stackoverflow sobre basic auth.
 + [Site JWT.IO](https://jwt.io) : Gera tokens JWT online 
+
+### Aula "Implementando JWT no Fastify"
+
++ `npm i @fastify/jwt` : Integra o uso de JTW junto ao Fastify
+  > **_OBS:_** O JWT é muito utilizado para rotas http, como por exemplo uma aplicação frontend conectando ao backend. Para integrar a aplicação com um software de terceiro normalmente são utilizados outros métodos.
