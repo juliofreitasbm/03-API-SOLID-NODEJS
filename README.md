@@ -185,7 +185,7 @@ ___
 
 + `npm i dayjs` : Para lidar com datas no javascript.
 
-### Aula "Validando data do check-in"
+### Aula "Princípios da autenticação JWT"
 
 + [Site Base Decode 64](https://base64decode.org) : Faz encode e decode no formato base 64
 + [StackOverflow Basic Auth](https://pt.stackoverflow.com/questions/254503/o-que-é-basic-auth) : Página no stackoverflow sobre basic auth.
