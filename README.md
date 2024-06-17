@@ -4,7 +4,15 @@ Esse módulo possui a estruturação do projeto GymPass app utilizando NodeJS, S
 
 ___
 ### Palavras chave:
->NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token), Test Environment with Vitest.
+>NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token), Test Environment with Vitest, Schemas in Databases (ambientes isolados dentro dos DBs)
+
+## Conteúdo do Módulo 3:
+
+<details>
+<summary><span style>Estrutura do projeto</span></summary>
+
+  + Lista 
+</details>
 
 ## Acompanhamento do Projeto:
 
@@ -200,8 +208,39 @@ ___
 
 + Os Test Environments são uma forma de ganhar performance executando vários testes dentro de um mesmo ambiente e evitando ter que criar, limpar e deletar bancos de dados para cada teste isoladamente. Os testes ficam menos 'isolados', mas podem ser executados num menor tempo.
 
-+ `npm link` : Ao rodar os testes o terminal reclama que não consegue encontrar a dependência 'vitest-environment-test'. Com esse comando o npm cria para esse pacote um repositório de pacotes local na máquina
++ `npm link` : Ao rodar os testes o terminal reclama que não consegue encontrar a dependência 'vitest-environment-test'. Com esse comando o npm cria para esse pacote um repositório de pacotes local na máquina, ou seja, essa configuração só passa na sua tes
   > **<span style="color:red">_OBS:_</span>** Esse comando deve ser executado dentro da pasta `prisma/vitest-environment-prisma` no projeto
 
 + `npm link vitest-environment-prisma` : Ao rodar esse comando o projeto passa a reconhecer o pacote vitest-environment-prisma. Agora deve ser possível executar os testes normalmente.
   > **<span style="color:red">_OBS:_</span>** Esse comando deve ser executado na pasta principal do projeto.
+
+### Aula "Organizando npm scripts"
+
++ Os scripts no package.json que possuem o nome no formato `pre + <nome-de-outro-script>` são sempre executados antes do script nomeado. Os scripts com `pos + <nome-de-outro-script>` são sempre executados depois.
+
++ `npm install -D npm-run-all` : Permite que os scripts no package.json sejam multiplataforma (pra Windows e Linux), mas precisam de uma sintaxe um pouco diferente.
+  > **_OBS:_** Segue a lista de como ficaram os scripts
+    ```
+    "scripts": {
+      "start:dev": "tsx watch src/server.ts",
+      "start": "node build/server.js",
+      "start:docker": "docker compose up -d",
+      "test:create-prisma-environment": "npm link ./prisma/vitest-environment-prisma",
+      "test:install-prisma-environment": "npm link vitest-environment-prisma",
+      "build": "tsup src --out-dir build",
+      "test": "vitest run --dir src/use-cases",
+      "test:watch": "vitest --dir src/use-cases",
+      "pretest:e2e": "run-s test:create-prisma-environment test:install-prisma-environment",
+      "test:e2e": "vitest run --dir src/http",
+      "test:coverage": "vitest run --coverage",
+      "test:ui": "vitest --ui"
+    },
+    ```
+
+### Aula "Teste E2E do registro"
+
++ `npm i supertest -D` : Biblioteca mais utilizada para fazer testes com chamada http sem precisar colocar a aplicação no ar.
+
++ `npm i @types/supertest -D` : Importa os types para a biblioteca supertest, pois ela não é escrita em typescript.
+
++ `"test:e2e:watch": "vitest --dir src/http"` : Novo script adicionado ao package.json para evitar que os links sejam feitos enquanto estamos rodando os testes e2e
