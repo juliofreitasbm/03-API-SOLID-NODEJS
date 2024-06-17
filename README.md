@@ -4,7 +4,7 @@ Esse módulo possui a estruturação do projeto GymPass app utilizando NodeJS, S
 
 ___
 ### Palavras chave:
->NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token)
+>NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token), Test Environment with Vitest.
 
 ## Acompanhamento do Projeto:
 
@@ -195,3 +195,13 @@ ___
 
 + `npm i @fastify/jwt` : Integra o uso de JTW junto ao Fastify
   > **_OBS:_** O JWT é muito utilizado para rotas http, como por exemplo uma aplicação frontend conectando ao backend. Para integrar a aplicação com um software de terceiro normalmente são utilizados outros métodos.
+
+### Aula "Criando test environment"
+
++ Os Test Environments são uma forma de ganhar performance executando vários testes dentro de um mesmo ambiente e evitando ter que criar, limpar e deletar bancos de dados para cada teste isoladamente. Os testes ficam menos 'isolados', mas podem ser executados num menor tempo.
+
++ `npm link` : Ao rodar os testes o terminal reclama que não consegue encontrar a dependência 'vitest-environment-test'. Com esse comando o npm cria para esse pacote um repositório de pacotes local na máquina
+  > **<span style="color:red">_OBS:_</span>** Esse comando deve ser executado dentro da pasta `prisma/vitest-environment-prisma` no projeto
+
++ `npm link vitest-environment-prisma` : Ao rodar esse comando o projeto passa a reconhecer o pacote vitest-environment-prisma. Agora deve ser possível executar os testes normalmente.
+  > **<span style="color:red">_OBS:_</span>** Esse comando deve ser executado na pasta principal do projeto.
