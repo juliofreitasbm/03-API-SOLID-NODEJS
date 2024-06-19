@@ -1,13 +1,14 @@
-import { FastifyInstance } from 'fastify'
-import { register } from './register'
-import { authenticate } from './authenticate'
-import { profile } from './profile'
 import { verifyJWT } from '@/http/middlewares/verify-jwt'
+import { FastifyInstance } from 'fastify'
+import { search } from './search'
+import { nearby } from './nearby'
+import { create } from './create'
 
 export async function gymsRoutes(app: FastifyInstance) {
-  app.post('/users', register)
-  app.post('/sessions', authenticate)
+  app.addHook('onRequest', verifyJWT) // O fastify chama o middleware de hook
 
-  /** Authenticated */
-  app.get('/me', { onRequest: [verifyJWT] }, profile)
+  app.get('/gyms/search', search)
+  app.get('/gyms/nearby', nearby)
+
+  app.post('/gyms', create)
 }

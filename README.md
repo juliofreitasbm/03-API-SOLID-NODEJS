@@ -219,7 +219,7 @@ ___
 + Os scripts no package.json que possuem o nome no formato `pre + <nome-de-outro-script>` são sempre executados antes do script nomeado. Os scripts com `pos + <nome-de-outro-script>` são sempre executados depois.
 
 + `npm install -D npm-run-all` : Permite que os scripts no package.json sejam multiplataforma (pra Windows e Linux), mas precisam de uma sintaxe um pouco diferente.
-  > **_OBS:_** Segue a lista de como ficaram os scripts
+  > **_OBS:_** Segue a lista de como ficaram os scripts.
     ```
     "scripts": {
       "start:dev": "tsx watch src/server.ts",
@@ -236,6 +236,7 @@ ___
       "test:ui": "vitest --ui"
     },
     ```
+    > **_OBS:_** Para o script `test:watch`, ao apertar A ele roda todos os testes novamente ao invés de rodar apenas o que sofreu alteração. 
 
 ### Aula "Teste E2E do registro"
 
