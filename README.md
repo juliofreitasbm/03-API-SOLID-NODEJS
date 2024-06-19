@@ -4,14 +4,116 @@ Esse módulo possui a estruturação do projeto GymPass app utilizando NodeJS, S
 
 ___
 ### Palavras chave:
->NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token), Test Environment with Vitest, Schemas in Databases (ambientes isolados dentro dos DBs)
+>NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token), Test Environment with Vitest, Schemas in Databases (ambientes isolados dentro dos DBs), Refresh Token
 
-## Conteúdo do Módulo 3:
+## Conteúdo Programático do Módulo 3:
 
-<details>
-<summary><span style>Estrutura do projeto</span></summary>
+<details style="font-size: 16px">
+<summary><span style="font-size: 18px">1. Estrutura do projeto</span></summary>
+
+  ---
+
+  + Introdução
+  + Definindo requisitos e regras
+  + Criando projeto Node.js
+  + Usando versões exatas do NPM
+  + Carregando variáveis ambiente
+  + Configurando ESLint
+  + Criando aliases de importação
+
+  ---
+</details>
+
+<details style="font-size: 16px">
+<summary><span style="font-size: 18px">2. Integração com Prisma ORM</span></summary>
+
+  ---
+
+  + Fundamentos do Prisma ORM
+  + Fundamentos do Docker
+  + PostgreSQL com Docker
+  + Utilizando o Docker Compose
+  + Criando schema do Prisma
+  + Relacionamentos entre tabelas
+
+  ---
+</details>
+
+<details style="font-size: 16px">
+<summary><span style="font-size: 18px">3. Caso de uso e design patterns</span></summary>
+
+  ---
+
+  + Criação de um usuário
+  + Hash da senha e validação
+  + Caso de uso de registro
+  + Repository Pattern
+  + Inversão de dependências
+  + Interface do repositório
+  + Lidando com erros do use case
+  + Handler de erros global
+
+  ---
+</details>
+
+<details style="font-size: 16px">
+<summary><span style="font-size: 18px">4. Design Patterns & Testes</span></summary>
+
+  ---
+
+  + Configurando Vitest
+  + Primeiro teste unitário
+  + In-Memory Databases
+  + Gerando coverage de testes
+  + Utilizando UI do Vitest
+
+  ---
+</details>
+
+<details style="font-size: 16px">
+<summary><span style="font-size: 18px">5. Implementando casos de uso</span></summary>
+
+  ---
+
+  + Caso de uso de autenticação
+  + Testes e controller de autenticação
+  + Refatorando instâncias nos testes
+  + Utilizando Factory Pattern
+  + Caso de uso de perfil
+  + Caso de uso de check-in
+  + TDD & Mocking
+
+  ---
+</details>
+
+<details style="font-size: 16px">
+<summary><span style="font-size: 18px">6. Controllers & Testes E2E</span></summary>
+
+  ---
 
   + Lista 
+
+  ---
+</details>
+
+<details style="font-size: 16px">
+<summary><span style="font-size: 18px">7. Refresh Token & RBAC</span></summary>
+
+  ---
+
+  + Lista 
+
+  ---
+</details>
+
+<details style="font-size: 16px">
+<summary><span style="font-size: 18px">8. CI/CD da aplicação</span></summary>
+
+  ---
+
+  + Lista 
+
+  ---
 </details>
 
 ## Acompanhamento do Projeto:
