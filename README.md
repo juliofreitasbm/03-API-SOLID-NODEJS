@@ -9,7 +9,7 @@ ___
 ## Conteúdo Programático do Módulo 3:
 
 <details style="font-size: 16px">
-<summary><span style="font-size: 18px">1. Estrutura do projeto</span></summary>
+<summary><strong style="font-size: 18px">1. Estrutura do projeto</strong></summary>
 
   ---
 
@@ -25,7 +25,7 @@ ___
 </details>
 
 <details style="font-size: 16px">
-<summary><span style="font-size: 18px">2. Integração com Prisma ORM</span></summary>
+<summary><strong style="font-size: 18px">2. Integração com Prisma ORM</strong></summary>
 
   ---
 
@@ -40,7 +40,7 @@ ___
 </details>
 
 <details style="font-size: 16px">
-<summary><span style="font-size: 18px">3. Caso de uso e design patterns</span></summary>
+<summary><strong style="font-size: 18px">3. Caso de uso e design patterns</strong></summary>
 
   ---
 
@@ -57,7 +57,7 @@ ___
 </details>
 
 <details style="font-size: 16px">
-<summary><span style="font-size: 18px">4. Design Patterns & Testes</span></summary>
+<summary><strong style="font-size: 18px">4. Design Patterns & Testes</strong></summary>
 
   ---
 
@@ -71,7 +71,7 @@ ___
 </details>
 
 <details style="font-size: 16px">
-<summary><span style="font-size: 18px">5. Implementando casos de uso</span></summary>
+<summary><strong style="font-size: 18px">5. Implementando casos de uso</strong></summary>
 
   ---
 
@@ -82,36 +82,65 @@ ___
   + Caso de uso de perfil
   + Caso de uso de check-in
   + TDD & Mocking
+  + Validando data do check-in
+  + Validando distância do check-in
+  + Caso de uso de criação de academia
+  + Caso de uso de histórico
+  + Caso de uso de métricas
+  + Caso de uso de busca de academias
+  + Caso de uso de academias próximas
+  + Caso de uso de validar de check-in
+  + Validando horário do check-in
 
   ---
 </details>
 
 <details style="font-size: 16px">
-<summary><span style="font-size: 18px">6. Controllers & Testes E2E</span></summary>
+<summary><strong style="font-size: 18px">6. Controllers & Testes E2E</strong></summary>
 
   ---
 
-  + Lista 
+  + Repositórios do Prisma
+  + Repositório de academias
+  + Factories dos casos de uso
+  + Princípios de autenticação JWT
+  + Implementando JWT no Fastify
+  + Controller de perIl
+  + Criando test environment
+  + Organizando NPM scripts
+  + Test Environment do Prisma
+  + Teste E2E do registro
+  + Teste E2E da autenticação
+  + Teste E2E do perfil
+  + Controller de criação de academia
+  + Outros controllers da academia
+  + Controllers das rotas de check-ins
+  + Testes E2E de rotas de academia
+  + Testes E2E de rotas de check-ins
 
   ---
 </details>
 
 <details style="font-size: 16px">
-<summary><span style="font-size: 18px">7. Refresh Token & RBAC</span></summary>
+<summary><strong style="font-size: 18px">7. Refresh Token & RBAC</strong></summary>
 
   ---
 
-  + Lista 
+  + Estratégia de refresh de token
+  + Implementação do refresh token
+  + Autorização por cargos (RBAC)
+  + Testes de RBAC
 
   ---
 </details>
 
 <details style="font-size: 16px">
-<summary><span style="font-size: 18px">8. CI/CD da aplicação</span></summary>
+<summary><strong style="font-size: 18px">8. CI/CD da aplicação</strong></summary>
 
   ---
 
-  + Lista 
+  + Executando testes unitários no CI
+  + Executando teste E2E no CI
 
   ---
 </details>
