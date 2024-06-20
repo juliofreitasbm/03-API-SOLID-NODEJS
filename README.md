@@ -4,7 +4,7 @@ Esse módulo possui a estruturação do projeto GymPass app utilizando NodeJS, S
 
 ___
 ### Palavras chave:
->NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token), Test Environment with Vitest, Schemas in Databases (ambientes isolados dentro dos DBs), Refresh Token
+>NodeJS, Fastify, Typescript, Eslint, Prisma ORM, PosgreSQL, Docker, SOLID, Hash de senha, Repository Pattern, Vitest, In-Memory Test Database Pattern (Martin Fowler), Factory Pattern, TTD - Test Driven Development, Casos de Uso, JWT (Jason Web Token), Test Environment with Vitest, Schemas in Databases (ambientes isolados dentro dos DBs), Refresh Token, Role Base Authorization Control (RBAC)
 
 ## Conteúdo Programático do Módulo 3:
 
@@ -376,3 +376,7 @@ ___
 + `npm i @types/supertest -D` : Importa os types para a biblioteca supertest, pois ela não é escrita em typescript.
 
 + `"test:e2e:watch": "vitest --dir src/http"` : Novo script adicionado ao package.json para evitar que os links sejam feitos enquanto estamos rodando os testes e2e
+
+### Aula "Estratégia de refresh de token"
+
++ `npm i @fastify/cookie` : Biblioteca para trabalhar com cookies no projeto
