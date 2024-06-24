@@ -166,15 +166,15 @@ ___
 - [x] O usuário não pode fazer 2 check-ins no mesmo dia;
 - [x] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
 - [x] O check-in só pode ser validado até 20 minutos após criado;
-- [ ] O check só pode ser validado por administradores;
-- [ ] A academia só pode ser cadastrada por administradores;
+- [x] O check só pode ser validado por administradores;
+- [x] A academia só pode ser cadastrada por administradores;
 
 ### Requisitos Não Funcionais:
 
 - [x] A senha do usuário precisa estar criptografada;
 - [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
 - [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
-- [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
+- [x] O usuário deve ser identificado por um JWT (JSON Web Token);
 
 ## Principais comandos:
 
@@ -384,3 +384,16 @@ ___
 ### Aula "Executando testes unitários no CI"
 
 + [GitHub Actions MarketPlace](https://github.com/marketplace/actions/setup-node-js-environment) : Página do Action de Setup Node.js environment
+
+### Aula "Executando testes E2E no CI"
+
++ `git checkout -b [branch_name]` : Cria uma branch nova com o nome "branch_name" e já acessa essa branch.
+
++ `gh pr create` : Criando uma pull request através da CLI do github.
+
++ `gh repo view -w` : Abre no navegador padrão a página do github referente ao projeto.
+
+
+## Autoria e Créditos:
+
++ Documentação criada com carinho e dedicação por [Júlio César Freitas](https://github.com/juliofreitasbm) a serviço do [CREA-GO](https://www.creago.org.br/).
