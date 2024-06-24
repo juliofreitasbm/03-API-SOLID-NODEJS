@@ -388,3 +388,10 @@ ___
 ### Aula "Executando testes E2E no CI"
 
 + `gh pr create` : Criando uma pull request através da CLI do github.
+
++ `gh repo view -w` : Abre no navegador padrão a página do github referente ao projeto.
+
+
+## Autoria e Créditos:
+
++ Documentação criada com carinho e dedicação por [Júlio César Freitas](https://github.com/juliofreitasbm) a serviço do [CREA-GO](https://www.creago.org.br/).
