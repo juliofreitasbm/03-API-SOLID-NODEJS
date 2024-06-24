@@ -384,3 +384,7 @@ ___
 ### Aula "Executando testes unitários no CI"
 
 + [GitHub Actions MarketPlace](https://github.com/marketplace/actions/setup-node-js-environment) : Página do Action de Setup Node.js environment
+
+### Aula "Executando testes E2E no CI"
+
++ `gh pr create` : Criando uma pull request através da CLI do github.
