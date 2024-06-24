@@ -387,6 +387,8 @@ ___
 
 ### Aula "Executando testes E2E no CI"
 
++ `git checkout -b [branch_name]` : Cria uma branch nova com o nome "branch_name" e já acessa essa branch.
+
 + `gh pr create` : Criando uma pull request através da CLI do github.
 
 + `gh repo view -w` : Abre no navegador padrão a página do github referente ao projeto.
